@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkedin Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="not found"></a>
+
+      <div class="search-box">
+        <img src="images/search.png" alt="not found">
+        <input type="text" placeholder="Search">
+      </div>
+
+    </div>
+    <div class="navbar-center">
+      <!-- since we don't have any page or link where we will direct the anchor tag, we are using 'javascript: void(0);' in href part -->
+      <ul>
+        <li><a href="javascript: void(0);" class="active-link"><img src="images/home.png" alt="not found"><span>Home</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/network.png" alt="not found"> <span>My Network</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/jobs.png" alt="not found"> <span>Jobs</span></a></li>
+        <li><a href="javascript: void(0);"> <img src="images/message.png" alt="not found"> <span>Messaging</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/notification.png" alt="not found"><span>Notifications</span></a></li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+      <div class="online">
+        <img src="images/profilepic.jpg" alt="not found" class="nav-profile-img" onclick="toggleMenu()">   <!-- so whenever we click in this img, js function will be called -->
+      </div>
+
+<!-------------------------profile-drop-down-menu---------------------------------->
+
+      <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+          <div class="user-info">
+            <img src="images/profilepic.jpg" alt="not found">
+            <div>
+              <h3>Princy Charles</h3>
+              <a href="index.html">See your profile</a>
+            </div>
+          </div>
+          <hr>
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/feedback.png" alt="not found">
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/setting.png" alt="not found">
+            <p>Setting & Privacy</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/help.png" alt="not found">
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/display.png" alt="not found">
+            <p>Display & Accessibility</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/logout.png" alt="not found">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+
+
+
+  </nav>
+
+<!--------------------------------navbar-close------------------------------------->
+
+<div class="container">
+  <div class="profile-main">
+    <div class="profile-container">
+      <img src="images/cover-pic.png" alt="not found" width="100%"> 
+      <div class="profile-container-inner">
+        <img src="images/profilepic.jpg" alt="not found" class="profile-pic">
+        <h1>Princy Charles</h1>
+        <b>Web Developer at Micros | Former Developer at DataStack | Intern at Oracle</b>
+        <p>Los Angeles, California, United States &middot; <a href="javascript: void(0);">Contact Info</a></p>
+        <div class="mutual-connection">
+          <img src="images/user-2.png" alt="not found">
+          <span>1 mutual connection: Jamie Dimon</span>
+        </div>
+        <div class="profile-btn">
+          <a href="javascript: void(0);" class="primary-btn"><img src="images/connect.png" alt="not found">Connect</a>
+          <a href="javascript: void(0);"><img src="images/chat.png" alt="not found">Message</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-description">
+      <h2>About</h2>
+      <p>I am a highly motivated and enthusiastic professional with a passion for web technologies. Throughout my career, I've had the privilege of honing my skills and tackling various challenges that have further developed my abilities.</p>
+      <a href="javascript: void(0);" class="see-more-link">See more...</a>
+    </div>
+
+    <div class="profile-description">
+      <h2>Experience</h2>
+      <div class="profile-desc-row">
+        <img src="images/microsoft.png" alt="not found">
+        <div>
+          <h3>Lead Front-End Developer</h3>
+          <b>Microsoft &middot; Full-time</b>
+          <b>Feb 2021 - Present &middot; 1.5 years</b>
+          <p>Maintain and modernize the client's web, mobile web and HTML5 interfaces. Ensure high performing, modular & optimized codebase of CSS, JS & HTML using reusable component-based code base methodology.</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="profile-desc-row">
+        <img src="images/slack.png" alt="not found">
+        <div>
+          <h3>Full Stack Developer</h3>
+          <b>Slack &middot; Full-time</b>
+          <b>June 2018 - Jan 2021 &middot; 2.6 years</b>
+          <p>Proficiency in front-end technologies like HTML, CSS, and JavaScript. Experience with popular front-end frameworks like React, Angular, or Vue.js. Familiarity with database management systems like MySQL, PostgreSQL, or MongoDB.</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="profile-desc-row">
+        <img src="images/google.png" alt="not found">
+        <div>
+          <h3>Web Developer</h3>
+          <b>Google Inc &middot; Full-time</b>
+          <b>Sept 2015 - May 2018 &middot; 2.8 years</b>
+          <p>Proficiency in front-end technologies like HTML, CSS, and JavaScript. Experience with popular front-end frameworks like React or Angular. Good communication and teamwork skills.</p>
+      
+        </div>
+      </div>
+      <hr>
+      <a href="javascript: void(0);" class="experience-link">Show all 7 experiences <img src="images/right-arrow.png" alt="not found"></a>
+    </div>
+
+    <div class="profile-description">
+      <h2>Education</h2>
+      <div class="profile-desc-row">
+        <img src="images/stanford.png" alt="not found">
+        <div>
+          <h3>Stanford University</h3>
+          <b>Mtech, Data Science</b>
+          <b>2020-2024</b>
+          <hr>
+        </div>
+      </div>
+
+      <div class="profile-desc-row">
+        <img src="images/north.png" alt="not found">
+        <div>
+          <h3>Northwestern University</h3>
+          <b>Btech, Computer Science</b>
+          <b>2016-2020</b>
+          <hr>
+        </div>
+      </div>
+
+      <div class="profile-desc-row">
+        <img src="images/mit.png" alt="not found">
+        <div>
+          <h3>Harvard University</h3>
+          <b>Senior High School</b>
+          <b>2014-2016</b>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="profile-description">
+      <h2>Skills</h2>
+      <a href="javascript: void(0);" class="skill-id">Leadership</a>
+      <a href="javascript: void(0);" class="skill-id">Web Design</a>
+      <a href="javascript: void(0);" class="skill-id">Development</a>
+      <a href="javascript: void(0);" class="skill-id">Communication</a>
+      <a href="javascript: void(0);" class="skill-id">UI/UX</a>
+      <a href="javascript: void(0);" class="skill-id">Planning</a>
+      <a href="javascript: void(0);" class="skill-id">Coding</a>
+      <a href="javascript: void(0);" class="skill-id">Javascript</a>
+      <a href="javascript: void(0);" class="skill-id">C++</a>
+      <a href="javascript: void(0);" class="skill-id">Enterprenourship</a>
+    </div>
+
+    <div class="profile-description">
+      <h2>Languages</h2>
+      <a href="javascript: void(0);" class="language-id">English</a>
+      <a href="javascript: void(0);" class="language-id">Hindi</a>
+      <a href="javascript: void(0);" class="language-id">Germany</a>
+    </div>
+    
+  </div>
+
+<!------------------------------------profile-sidebar------------------------------>
+  <div class="profile-sidebar">
+
+    <div class="sidebar-ad">
+      <small>Ad &middot; &middot; &middot;</small>
+      <p>Master the 5 principles of web design</p>
+      <div>
+        <img src="images/profilepic.jpg" alt="not found">
+        <img src="images/mi-logo.png" alt="not found">
+      </div>
+      <b>Brand and Demand in Xiaomi</b>
+      <a href="javascript: void(0);" class="ad-link">Learn More</a>
+    </div>
+
+    <div class="sidebar-people">
+      <h3>People you may know</h3>
+      <div class="sidebar-people-row">
+        <img src="images/user-3.png" alt="not found">
+        <div>
+          <h2>Olivia Taylor</h2>
+          <p>Founder and CEO at Gellelio Group | Angel Investor</p>
+          <a href="javascript: void(0);">Connect</a>
+        </div>
+      </div>
+
+      <div class="sidebar-people-row">
+        <img src="images/user-2.png" alt="not found">
+        <div>
+          <h2>Jamie Dimon</h2>
+          <p>Chairman and CEO of JPMorgan Chase & Co.</p>
+          <a href="javascript: void(0);">Connect</a>
+        </div>
+      </div>
+
+      <div class="sidebar-people-row">
+        <img src="images/user-4.png" alt="not found">
+        <div>
+          <h2>Clarence George</h2>
+          <p>Founder and CEO at Ventura Aviation Pvt Ltd.</p>
+          <a href="javascript: void(0);">Connect</a>
+        </div>
+      </div>
+
+      <div class="sidebar-people-row">
+        <img src="images/user-5.png" alt="not found">
+        <div>
+          <h2>William Brown</h2>
+          <p>Founder and CEO at International Business Machines Corporation(IBM)</p>
+          <a href="javascript: void(0);">Connect</a>
+        </div>
+      </div>
+
+      <div class="sidebar-people-row">
+        <img src="images/user-1.png" alt="not found">
+        <div>
+          <h2>Martin Lewis</h2>
+          <p>Head of Marketing at Alibaba</p>
+          <a href="javascript: void(0);">Connect</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="profile-footer">
+  <div class="sidebar-useful-links">
+
+    <a href="javascript: void(0);">About</a>
+    <a href="javascript: void(0);">Accessibility</a>
+    <a href="javascript: void(0);">Help Center</a>
+    <a href="javascript: void(0);">Privacy Policy</a>
+    <a href="javascript: void(0);">Advertising</a>
+    <a href="javascript: void(0);">Get the App</a>
+    <a href="javascript: void(0);">More</a>
+
+    <div class="copyright-msg">
+      <img src="images/logo.png" alt="not found">
+      <p>Linked &#169; 2023. All rights reserved</p>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<script>
+  let profileMenu = document.getElementById("profileMenu")
+
+  function toggleMenu()
+  {
+    profileMenu.classList.toggle("open-menu");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkedin Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="not found"></a>
+
+      <div class="search-box">
+        <img src="images/search.png" alt="not found">
+        <input type="text" placeholder="Search">
+      </div>
+
+    </div>
+    <div class="navbar-center">
+      <!-- since we don't have any page or link where we will direct the anchor tag, we are using 'javascript: void(0);' in href part -->
+      <ul>
+        <li><a href="javascript: void(0);" class="active-link"><img src="images/home.png" alt="not found"><span>Home</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/network.png" alt="not found"> <span>My Network</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/jobs.png" alt="not found"> <span>Jobs</span></a></li>
+        <li><a href="javascript: void(0);"> <img src="images/message.png" alt="not found"> <span>Messaging</span></a></li>
+        <li><a href="javascript: void(0);"><img src="images/notification.png" alt="not found"><span>Notifications</span></a></li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+      <div class="online">
+        <img src="images/profilepic.jpg" alt="not found" class="nav-profile-img" onclick="toggleMenu()">   <!-- so whenever we click in this img, js function will be called -->
+      </div>
+
+<!-------------------------profile-drop-down-menu---------------------------------->
+
+      <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+          <div class="user-info">
+            <img src="images/profilepic.jpg" alt="not found">
+            <div>
+              <h3>Princy Charles</h3>
+              <a href="profile.html">See your profile</a>
+            </div>
+          </div>
+          <hr>
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/feedback.png" alt="not found">
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/setting.png" alt="not found">
+            <p>Setting & Privacy</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/help.png" alt="not found">
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/display.png" alt="not found">
+            <p>Display & Accessibility</p>
+            <span>></span>
+          </a>
+
+          <a href="javascript: void(0);" class="profile-menu-link">
+            <img src="images/logout.png" alt="not found">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+
+
+
+  </nav>
+
+<!--------------------------------navbar-close------------------------------------->
+
+<div class="container">
+
+<!---------------------------------left-sidebar------------------------------------>
+  <div class="left-sidebar">
+    <div class="sidebar-profile-box">
+      <img src="images/cover-pic.png" alt="not found" width="100%">
+      <div class="sidebar-profile-info">
+        <img src="images/profilepic.jpg" alt="not found">
+        <h1>Princy Charles</h1>
+        <h3>Web Developer at Micros</h3>
+        <ul>
+          <li>Your profile views<span>52</span></li>
+          <li>Your post views<span>802</span></li>
+          <li>Your connections<span>502</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-profile-link">
+        <a href="javascript: void(0);"><img src="images/items.png" alt="not found"> My items</a>
+        <a href="javascript: void(0);"><img src="images/premium.png" alt="not found"> Try Premium</a>
+      </div>
+    </div>
+    <div class="sidebar-activity" id="sidebarActivity">
+      <h3>RECENTS</h3>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> Web Development</a>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> User Interface</a>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> Online Learning</a>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> Learn Online</a>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> Code Better</a>
+      <a href="javascript: void(0);"><img src="images/recent.png" alt="not found"> Group Learning</a>
+      <h3>GROUPS</h3>
+      <a href="javascript: void(0);"><img src="images/group.png" alt="not found"> Web Design Group</a>
+      <a href="javascript: void(0);"><img src="images/group.png" alt="not found"> HTML & CSS Learners</a>
+      <a href="javascript: void(0);"><img src="images/group.png" alt="not found"> Python & Javascript Group</a>
+      <a href="javascript: void(0);"><img src="images/group.png" alt="not found"> Learn Coding Online</a>
+      <h3>HASHTAG</h3>
+      <a href="javascript: void(0);"><img src="images/hashtag.png" alt="not found"> webdevelopment</a>
+      <a href="javascript: void(0);"><img src="images/hashtag.png" alt="not found"> userinterface</a>
+      <a href="javascript: void(0);"><img src="images/hashtag.png" alt="not found"> onlinelearnning</a>
+      <div class="discover-more-link">
+        <a href="javascript: void(0);">Discover more</a>
+      </div>
+    </div>
+
+    <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+
+  </div>
+  
+
+
+
+
+<!------------------------------------main-content--------------------------------->
+  <div class="main-content">
+    <div class="create-post">
+      <div class="create-post-input">
+        <img src="images/profilepic.jpg" alt="not found">
+        <textarea rows="2" placeholder="Write a post"></textarea>
+      </div>
+      <div class="create-post-links">
+        <li><img src="images/photo.png" alt="not found">Photo</li>
+        <li><img src="images/video.png" alt="not found">Video</li>
+        <li><img src="images/event.png" alt="not found">Event</li>
+        <li>Post</li>
+      </div>
+    </div>
+    <div class="sort-by">
+      <hr>
+      <p>Sort by: <span>top <img src="images/down-arrow.png" alt="not found"></span></p>
+    </div>
+
+<!------------------------------------1st Post------------------------------------->
+    <div class="post">
+      <div class="post-author">
+        <img src="images/user-3.png" alt="not found">
+        <div>
+          <h1>Olivia Taylor</h1>
+          <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+          <small>2 hours ago</small>
+        </div>
+      </div>
+      <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.</p>
+      <img src="images/post-image-1.png" alt="not found" width="100%">
+
+      <div class="post-stats">
+        <div class="post-stats-reaction">
+          <img src="images/thumbsup.png" alt="not found">
+          <img src="images/love.png
+          " alt="not found">
+          <img src="images/clap.png" alt="not found">
+          <span class="liked-user">Abhinak Mishra and 75 others</span>
+        </div>
+        <div>
+          <span>22 comments &middot; 40 shares</span>
+        </div>
+      </div>
+
+      <div class="post-activity">
+        <div>
+          <img src="images/profilepic.jpg" alt="not found" class="post-activity-user-icon">
+          <img src="images/down-arrow.png" alt="not found" class="post-activity-arrow-icon">
+        </div>
+        <div class="post-activity-link">
+          <img src="images/like.png" alt="not found">
+          <span>Like</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/comment.png" alt="not found">
+          <span>Comment</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/share.png" alt="not found">
+          <span>Share</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/send.png" alt="not found">
+          <span>Send</span>
+        </div>
+
+      </div>
+    </div>
+
+<!---------------------------Further creating more post---------------------------->
+    <div class="post">
+      <div class="post-author">
+        <img src="images/user-4.png" alt="not found">
+        <div>
+          <h1>Clarence George</h1>
+          <small>Founder and CEO at Ventura Aviation Pvt Ltd.</small>
+          <small>4 hours ago</small>
+        </div>
+      </div>
+      <p>If you're not stubborn, you'll give up on experiments too soon. And if you're not flexible, you'll pound your head against the wall and you won't see a different solution to a problem you're trying to solve.</p>
+      <img src="images/post-image-2.png" alt="not found" width="100%">
+
+      <div class="post-stats">
+        <div class="post-stats-reaction">
+          <img src="images/thumbsup.png" alt="not found">
+          <img src="images/love.png
+          " alt="not found">
+          <img src="images/clap.png" alt="not found">
+          <span class="liked-user">Alexandre Dumas and 105 others</span>
+        </div>
+        <div>
+          <span>534 comments &middot; 26 shares</span>
+        </div>
+      </div>
+
+      <div class="post-activity">
+        <div>
+          <img src="images/profilepic.jpg" alt="not found" class="post-activity-user-icon">
+          <img src="images/down-arrow.png" alt="not found" class="post-activity-arrow-icon">
+        </div>
+        <div class="post-activity-link">
+          <img src="images/like.png" alt="not found">
+          <span>Like</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/comment.png" alt="not found">
+          <span>Comment</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/share.png" alt="not found">
+          <span>Share</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/send.png" alt="not found">
+          <span>Send</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-author">
+        <img src="images/user-5.png" alt="not found">
+        <div>
+          <h1>William Brown</h1>
+          <small>Founder and CEO at International Business Machines Corporation(IBM)</small>
+          <small>11 hours ago</small>
+        </div>
+      </div>
+      <p>The biggest risk is not taking any risk. In a world that is changing quickly, the only strategy that is guaranteed to fail is not taking risks. The only way to do great work is to love what you do.</p>
+      <img src="images/post-image-4.png" alt="not found" width="100%">
+
+      <div class="post-stats">
+        <div class="post-stats-reaction">
+          <img src="images/thumbsup.png" alt="not found">
+          <img src="images/love.png
+          " alt="not found">
+          <img src="images/clap.png" alt="not found">
+          <span class="liked-user">James Anderson and 175 others</span>
+        </div>
+        <div>
+          <span>2k comments &middot; 4000 shares</span>
+        </div>
+      </div>
+
+      <div class="post-activity">
+        <div>
+          <img src="images/profilepic.jpg" alt="not found" class="post-activity-user-icon">
+          <img src="images/down-arrow.png" alt="not found" class="post-activity-arrow-icon">
+        </div>
+        <div class="post-activity-link">
+          <img src="images/like.png" alt="not found">
+          <span>Like</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/comment.png" alt="not found">
+          <span>Comment</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/share.png" alt="not found">
+          <span>Share</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/send.png" alt="not found">
+          <span>Send</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-author">
+        <img src="images/user-2.png" alt="not found">
+        <div>
+          <h1>Jamie Dimon</h1>
+          <small>Chairman and CEO of JPMorgan Chase & Co.</small>
+          <small>19 hours ago</small>
+        </div>
+      </div>
+      <p>The secret of my success is that we have gone to exceptional lengths to hire the best people in the world. Your brand is what other people say about you when you're not in the room.</p>
+      <img src="images/post-image-3.png" alt="not found" width="100%">
+
+      <div class="post-stats">
+        <div class="post-stats-reaction">
+          <img src="images/thumbsup.png" alt="not found">
+          <img src="images/love.png
+          " alt="not found">
+          <img src="images/clap.png" alt="not found">
+          <span class="liked-user">Johnson Charles and 705 others</span>
+        </div>
+        <div>
+          <span>4k comments &middot; 400 shares</span>
+        </div>
+      </div>
+
+      <div class="post-activity">
+        <div>
+          <img src="images/profilepic.jpg" alt="not found" class="post-activity-user-icon">
+          <img src="images/down-arrow.png" alt="not found" class="post-activity-arrow-icon">
+        </div>
+        <div class="post-activity-link">
+          <img src="images/like.png" alt="not found">
+          <span>Like</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/comment.png" alt="not found">
+          <span>Comment</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/share.png" alt="not found">
+          <span>Share</span>
+        </div>
+        <div class="post-activity-link">
+          <img src="images/send.png" alt="not found">
+          <span>Send</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+<!-----------------------------------right-sidebar--------------------------------->
+  <div class="right-sidebar">
+    <div class="sidebar-news">
+      <img src="images/more.png" alt="not found" class="info-icon">
+      <h3>Trending News</h3>
+      <a href="javascript: void(0);">High demand for skilled manpower</a>
+      <span>3h ago &middot; 1,934 readers</span>
+      <a href="javascript: void(0);">Careers growing hroizontally too</a>
+      <span>9h ago &middot; 5,234 readers</span>
+      <a href="javascript: void(0);">Less work visa for US, more for UK</a>
+      <span>11h ago &middot; 10,944 readers</span>
+      <a href="javascript: void(0);">More hiring= higher confidence?</a>
+      <span>19h ago &middot; 19,634 readers</span>
+      <a href="javascript: void(0);">Gautami Adani is the world's third richest</a>
+      <span>1d ago &middot; 20,998 readers</span>
+
+      <a href="javascript: void(0);" class="read-more-link">Read More</a>
+    </div>
+    <div class="sidebar-ad">
+      <small>Ad &middot; &middot; &middot;</small>
+      <p>Master the 5 principles of web design</p>
+      <div>
+        <img src="images/profilepic.jpg" alt="not found">
+        <img src="images/mi-logo.png" alt="not found">
+      </div>
+      <b>Brand and Demand in Xiaomi</b>
+      <a href="javascript: void(0);" class="ad-link">Learn More</a>
+    </div>
+    <div class="sidebar-useful-links">
+      <a href="javascript: void(0);">About</a>
+      <a href="javascript: void(0);">Accessibility</a>
+      <a href="javascript: void(0);">Help Center</a>
+      <a href="javascript: void(0);">Privacy Policy</a>
+      <a href="javascript: void(0);">Advertising</a>
+      <a href="javascript: void(0);">Get the App</a>
+      <a href="javascript: void(0);">More</a>
+
+      <div class="copyright-msg">
+        <img src="images/logo.png" alt="not found">
+        <p>Linked &#169; 2023. All rights reserved</p>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
